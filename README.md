@@ -1,7 +1,7 @@
 # PlayFLU
 Simplest playout system for Flussonic Media Server based on PHP-Mysql-NGINX 
 
-# Make sure the Flussonic Media Server already installed!
+##### Make sure the Flussonic Media Server already installed!
 Download it from: https://erlyvideo.ru/flussonic-media-server
 
 1. Download all files from this project
@@ -20,10 +20,10 @@ Download it from: https://erlyvideo.ru/flussonic-media-server
 
 Close terminal and open new again:
 
-Execute from command line
-######ps aux | grep handbrake 
+Execute from command line:
+###### ps aux | grep handbrake 
 or 
-######ps aux | grep playlist 
+###### ps aux | grep playlist 
 
 for check these processes
 
