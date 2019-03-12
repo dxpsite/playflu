@@ -4,7 +4,7 @@
 
     server with default setting (user 'root' with no password) */
 
-    define('DB_SERVER', 'p:mariadb');
+    define('DB_SERVER', 'mariadb');
 
     define('DB_USERNAME', 'subty');
 
