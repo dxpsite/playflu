@@ -1,6 +1,6 @@
 <?php
 //fetch.php;
-$connect = mysqli_connect("localhost", "root", "trolimoli1218!", "dbase");
+$connect = mysqli_connect("localhost", "root", "***************", "dbase");
 $query = "SELECT * FROM comments WHERE comment_status = 0 ORDER BY comment_id DESC";
 $result = mysqli_query($connect, $query);
 $output = '';

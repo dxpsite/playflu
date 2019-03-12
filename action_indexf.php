@@ -1,6 +1,6 @@
 <?php  
 //action.php
-$connect = mysqli_connect('localhost', 'root', 'trolimoli1218!', 'dbase');
+$connect = mysqli_connect('localhost', 'root', '**********', 'dbase');
 mysqli_set_charset($connect,"utf8");
 $input = filter_input_array(INPUT_POST);
 

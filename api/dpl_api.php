@@ -24,7 +24,7 @@ if (!$action) {
 if ($action == "all") {
 
 ///////////////////////////////////
-$contents = file_get_contents('https://shardik:trolimoli1218!@peerhub.ru/flussonic/api/playlist/playlist_daily');
+$contents = file_get_contents('https://*************:*************/flussonic/api/playlist/playlist_daily');
 if (!empty($contents))
 {
 
@@ -178,7 +178,7 @@ $(function()
 elseif ($action == "save") {
 
 ///////////////////////////////////
-$contents = file_get_contents('https://shardik:trolimoli1218!@peerhub.ru/flussonic/api/playlist/playlist_daily');
+$contents = file_get_contents('https://*************:*************@peerhub.ru/flussonic/api/playlist/playlist_daily');
 if (!empty($contents))
 {
 
@@ -318,7 +318,7 @@ if (mysqli_query($link, $sql_update)) {
         echo "Не удалось скопировать $file...\n";
       }
 
-    shell_exec("curl -u shardik:trolimoli1218! https://peerhub.ru/flussonic/api/stream_restart/playlist_daily");
+    shell_exec("curl -u *************:************* https://peerhub.ru/flussonic/api/stream_restart/playlist_daily");
 }
 
 

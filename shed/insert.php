@@ -2,7 +2,7 @@
 //insert.php
 if(isset($_POST["subject"]))
 {
- $connect = mysqli_connect("localhost", "root", "trolimoli1218!", "dbase");
+ $connect = mysqli_connect("localhost", "root", "*************", "dbase");
  $subject = mysqli_real_escape_string($connect, $_POST["subject"]);
  $comment = mysqli_real_escape_string($connect, $_POST["comment"]);
  $query = "

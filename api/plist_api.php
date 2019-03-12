@@ -1,6 +1,6 @@
 <?php
 
-$contents = file_get_contents('https://shardik:trolimoli1218!@peerhub.ru/flussonic/api/playlist/playlist1');
+$contents = file_get_contents('https://*************:*************@peerhub.ru/flussonic/api/playlist/playlist1');
 if (!empty($contents))
 {
 

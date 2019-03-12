@@ -5,7 +5,7 @@ require_once '../config.php';
 
 
 ///////////////////////////////////
-$contents = file_get_contents('https://shardik:trolimoli1218!@peerhub.ru/flussonic/api/playlist/playlist1');
+$contents = file_get_contents('https://*************:*************@peerhub.ru/flussonic/api/playlist/playlist1');
 if (!empty($contents))
 {
 
@@ -127,7 +127,7 @@ if (mysqli_query($link, $sql_update)) {
     }
    // echo "<br />Checked: $checked";
     mysql_data_seek($sql,0); // <=== Set the resultsets internal pointer back to zero (the first record).
-    shell_exec("curl -u shardik:trolimoli1218! https://peerhub.ru/flussonic/api/stream_restart/playlist1");
+    shell_exec("curl -u *************:************* https://peerhub.ru/flussonic/api/stream_restart/playlist1");
 }
 
  $output .= "</tbody></table>";

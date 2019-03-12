@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 $input = filter_input_array(INPUT_POST);
 $fname = mysqli_real_escape_string($mysqli, $input["fname"]);
 require 'config.php';
-$mysqli = new mysqli('localhost', 'root', 'trolimoli1218!', 'dbase');
+$mysqli = new mysqli('localhost', 'root', '********', 'dbase');
 mysqli_set_charset($mysqli,"utf8");
 if (mysqli_connect_errno()) {
   echo json_encode(array('mysqli' => 'Failed to connect to MySQL: ' . mysqli_connect_error()));

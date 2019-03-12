@@ -1,6 +1,6 @@
 <?php
 //update.php
-$connect = mysqli_connect("localhost", "root", "trolimoli1218!", "dbase");
+$connect = mysqli_connect("localhost", "root", "**************", "dbase");
 $from = $_POST["from"];
 $id = $_POST["num"];
 //for($i=0; $i<count($_POST["page_id_array"]); $i++)
