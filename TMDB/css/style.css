@@ -1,0 +1,57 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body,.navbar{
+    background: #211A1E;
+    color: #fff;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: #fff;
+}
+.navbar-brand{
+    color: #FFD400
+}
+.top-rate h2{
+padding: 20px 0px;
+}
+.top-rate p{
+    margin: 0;
+}
+.top-rate  p span,.top-rate span{
+    color: #FFD400;
+}
+.view{
+    margin: 10px 10px;
+}
+.view-all{
+    margin-top: 4px;
+    background: #FFD400;
+    color: #000;
+    border: .5px solid #FFD400;
+    border-radius: 8px;
+    text-align: center;
+    padding: 4px 4px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #000;
+}
+.footer{
+    text-align: center;
+    margin-top: 30px;
+    background: #211A1E;
+    color: #fff;
+    border-top:1px solid #FFD400 
+}
+.footer p{
+    margin-bottom: 0;
+}
+.info{
+    padding: 40px 40px;
+}
+.info span , .all_movies span{
+    color: #FFD400;
+}
+
