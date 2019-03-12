@@ -1,0 +1,63 @@
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name server.ru www.server.ru;
+    client_max_body_size 2024M;
+    return 301 https://$server_name$request_uri;
+}
+server {
+    listen 443 ssl default_server;
+    listen [::]:443 ssl default_server;
+    include snippets/ssl-subty.ru.conf;
+    include snippets/ssl-params.conf;
+    root /home/playtube;
+    #auth_basic "Restricted Access";
+    #auth_basic_user_file /home/paroli;
+    index index.php index.html;
+    client_max_body_size 2024M;
+
+    location ~ /.well-known {
+                allow all;
+        }
+
+
+        rewrite /item-(.*)$ /read.php?id=$1 last;
+        #rewrite /v(.*)$ /view.php?id=$1 last;
+        rewrite /erase-(.*)$ /delete.php?id=$1 last;
+        rewrite /addfile-(.*)$ /putfile.php?id=$1 last;
+       # rewrite ^/addmedia /create.php last;
+        rewrite ^/settings /system.php last;
+        
+location / {
+  if (!-e $request_filename){
+    rewrite ^/$ /index.php?link1=home;
+  }
+
+
+    location ^~ /pmadmin {
+    
+                root /home/crud/;
+                index index.php;
+                try_files $uri $uri/ /pmadmin/index.php;
+
+
+                 location ~ \.php$ {
+                        #try_files $uri =404;
+                        include snippets/fastcgi-php.conf;
+                        fastcgi_pass unix:/var/run/php5-fpm.sock;
+                }
+               
+        }        
+
+
+
+    location ~ \.php$ {
+        client_max_body_size 2048M;
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+}
