@@ -1,7 +1,7 @@
 # PlayFLU
 Simplest playout system for Flussonic Media Server based on PHP-Mysql-NGINX 
 
-##### Make sure the Flussonic Media Server already installed!
+#### Make sure the Flussonic Media Server already installed!
 > Download it from: https://flussonic.com/flussonic-media-server
 
 > Installation guide: https://flussonic.com/doc/quick-start#installation
