@@ -33,12 +33,12 @@ for check these processes
 
 #### Some screenshots from PlayFLU:
 
-https://subty.ru/images/Screenshot_2.png
-https://subty.ru/images/Screenshot_3.png
-https://subty.ru/images/Screenshot_4.png
-https://subty.ru/images/Screenshot_5.png
-https://subty.ru/images/Screenshot_6.png
-https://subty.ru/images/Screenshot_7.png
+![alt text](https://subty.ru/images/Screenshot_2.png)
+![alt text](https://subty.ru/images/Screenshot_3.png)
+![alt text](https://subty.ru/images/Screenshot_4.png)
+![alt text](https://subty.ru/images/Screenshot_5.png)
+![alt text](https://subty.ru/images/Screenshot_6.png)
+![alt text](https://subty.ru/images/Screenshot_7.png)
 
 > Demo access will be soon.
 
