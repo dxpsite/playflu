@@ -2,7 +2,9 @@
 Simplest playout system for Flussonic Media Server based on PHP-Mysql-NGINX 
 
 ##### Make sure the Flussonic Media Server already installed!
-Download it from: https://erlyvideo.ru/flussonic-media-server
+Download it from: https://flussonic.com/flussonic-media-server
+Installation guide: https://flussonic.com/doc/quick-start#installation
+
 
 1. Download all files from this project
 
@@ -15,10 +17,10 @@ Download it from: https://erlyvideo.ru/flussonic-media-server
 5. Copy folder [handbrake-bot] into etc/ and go to ssh and execute several commands:
 ###### #cd /opt/hanbrake-bot
 ###### #screen
-###### #/usr/bin/php5.6 -f /opt/handbrake-bot/handbrake-bot.php
-###### #/usr/bin/php5.6 -f /opt/handbrake-bot/playlist-bot.php
+###### #/usr/bin/php -f /opt/handbrake-bot/handbrake-bot.php
+###### #/usr/bin/php -f /opt/handbrake-bot/playlist-bot.php
 
-Close terminal and open new again:
+Close terminal and open try again:
 
 Execute from command line:
 ###### #ps aux | grep handbrake 
