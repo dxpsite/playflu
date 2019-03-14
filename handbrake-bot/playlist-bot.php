@@ -30,7 +30,7 @@ function get_playlist_from_database($link, $db_name) {
 
 function email_submitter($playlist_name) {
   // send email to media owner
-	    $to = 'dxpsite@gmail.com';
+	    $to = '*********@gmail.com';
 	    $subject = "PlayFlu event: Daily playlist setup successfully";
 	    $message = "Your playlist with name '".$playlist_name."' has been set in to the mainframe.";
 	    $from = "bot@subty.ru";

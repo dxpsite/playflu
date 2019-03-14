@@ -17,11 +17,11 @@
 	// TODO: Config should be done via an INI config file.
 	$db_host="localhost";
 	$db_user="root";
-	$db_password="trolimoli1218!";
+	$db_password="***************";
 	$db_name="dbase";
 	//$mediadrop_video_dir="/home/sample/files/"; // Mediadrop Media directory, note the trailing slash
-	$mediadrop_video_dir="/home/playtube/crud/media/files/"; // Mediadrop Media directory, note the trailing slash
-	$handbrake_bot_dir="/opt/mediadrop-handbrake/";
+	$mediadrop_video_dir="/home/playflu/media/files/"; // Mediadrop Media directory, note the trailing slash
+	$handbrake_bot_dir="/opt/handbrake-bot/";
 	$sleep_duration= 10;				// Bot sleep duration in secs between checks
 	// =====================================
 	
@@ -107,7 +107,7 @@ function insert_new_movie_to_database($db_name, $file_path, $new_file, $media_id
 
 function email_submitter($media_file_name) {
   // send email to media owner
-	    $to = 'dxpsite@gmail.com';
+	    $to = '***********@gmail.com';
 	    $subject = "PlayFlu event: Video Transcoded";
 	    $message = "Your file '".$media_file_name."' has been fed in to the mainframe and converted in to epic media.";
 	    $from = "bot@subty.ru";
