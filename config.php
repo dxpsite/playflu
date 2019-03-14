@@ -22,7 +22,7 @@
 
     define('DB_USERNAME', 'root');
 
-    define('DB_PASSWORD', 'trolimoli1218!');
+    define('DB_PASSWORD', '**************');
 
     define('DB_NAME', 'dbase');
 
