@@ -33,15 +33,15 @@ while ($row = mysqli_fetch_array($result)) {
 $bucket = 'testbox1';
 $keyname = $row['name'];
 // $filepath should be absolute path to a file on disk                      
-$filePath = '/home/playtube/crud/media/files/'.$row['name'].'';
+$filePath = '/home/playflu/media/files/'.$row['name'].'';
 
 // Instantiate the client.
  $s3 = new S3Client([
     'version'     => 'latest',
     'region'      => 'ru-msk',
     'credentials' => [
-        'key'    => 'faGeMDnBHQjsgUa9Apbt2z',
-        'secret' => 'fFLoRrXFmU9ELDMziopzXkvJYoVMpmsDm3t4tgLprSog',
+        'key'    => '',
+        'secret' => '',
     ],
     'endpoint' => 'https://hb.bizmrg.com'
  ]);
