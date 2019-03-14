@@ -40,8 +40,8 @@ $filePath = '/home/playtube/crud/media/files/'.$row['name'].'';
     'version'     => 'latest',
     'region'      => 'ru-msk',
     'credentials' => [
-        'key'    => '*****************',
-        'secret' => '*******************',
+        'key'    => 'faGeMDnBHQjsgUa9Apbt2z',
+        'secret' => 'fFLoRrXFmU9ELDMziopzXkvJYoVMpmsDm3t4tgLprSog',
     ],
     'endpoint' => 'https://hb.bizmrg.com'
  ]);

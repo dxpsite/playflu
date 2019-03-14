@@ -9,7 +9,7 @@ Simplest playout system for Flussonic Media Server based on PHP-Mysql-NGINX
 
 1. Download all files from this project
 
-2. Extract on your server (ex. /home/crud/)
+2. Extract on your server (ex. /home/playflu/)
 
 3. Change config.php , .aws/credentials and nginx_config/default with your values
 

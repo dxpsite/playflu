@@ -1,6 +1,6 @@
 <?php  
 //action.php
-$connect = mysqli_connect('localhost', 'root', '**********', 'dbase');
+$connect = mysqli_connect('localhost', 'root', 'trolimoli1218!', 'dbase');
 mysqli_set_charset($connect,"utf8");
 $input = filter_input_array(INPUT_POST);
 
@@ -30,7 +30,7 @@ if($input["action"] === 'delete')
   mysqli_query($connect, $query);
  // mysqli_set_charset($connect,"utf8");
 
-  unlink("/home/playtube/crud/media/files/".$name.".mp4"); 
+  unlink("/home/playflu/media/files/".$name.".mp4"); 
 }
 
 echo json_encode($input);

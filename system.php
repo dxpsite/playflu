@@ -40,9 +40,9 @@
                         </div>
 
                        <?php
-
+$connect = mysqli_connect("localhost", "root", "trolimoli1218!", "dbase");
 $query = "SELECT * FROM tbl_user ORDER BY id DESC";
-$result = mysqli_query($link, $query);
+$result = mysqli_query($connect, $query);
 ?>
 <html>  
  <head>  

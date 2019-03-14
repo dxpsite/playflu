@@ -1,18 +1,32 @@
     <?php
+    define ('PL_HOST', $_SERVER['HTTP_HOST']);
+
+    define ('PL_ABS_URL', '/home/playflu');
+    
+    /*Flussonic */
+    define('FL_HOST', 'peerhub.ru');
+
+    define('FL_USR', 'playflu_usr');
+
+    define('FL_PWD', 'letmein!');
+
+    define('FL_PL_DEMO', 'playlist1');
+
+    define('FL_PL_DAILY', 'playlist_daily');
 
     /* Database credentials. Assuming you are running MySQL
 
     server with default setting (user 'root' with no password) */
 
-    define('DB_SERVER', 'mariadb');
+    define('DB_SERVER', 'localhost');
 
-    define('DB_USERNAME', 'subty');
+    define('DB_USERNAME', 'root');
 
-    define('DB_PASSWORD', 'letmein!play0ut');
+    define('DB_PASSWORD', 'trolimoli1218!');
 
     define('DB_NAME', 'dbase');
 
-     
+
 
     /* Attempt to connect to MySQL database */
 

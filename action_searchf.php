@@ -62,12 +62,12 @@ $extinfdata = ($row['duration_custom'] != 0) ? $row['duration_custom'] : $row['d
 				<td>'.$row["id"].'</td>
 				<td>'.$row["fname"];
 
-$filename = '/home/playtube/crud/media/files/'.$row["name"].'';
+//$filename = '/home/playflu/media/files/'.$row["name"].'';
 
 if (file_exists($filename)) {
     $output .=' ';
 } else {
-    $output .=' (отсутствует в локальной папке, возможно удален)';
+//    $output .=' (отсутствует в локальной папке, возможно удален)';
 }
 
 

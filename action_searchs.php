@@ -62,7 +62,7 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["id"].'</td>
 				<td>'.$row["fname"];
 
-$filename = '/home/playtube/crud/media/files/'.$row["name"].'';
+$filename = '/home/playflu/media/files/'.$row["name"].'';
 
 if (file_exists($filename)) {
     $output .=' ';

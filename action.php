@@ -1,11 +1,11 @@
-<?php
-require_once 'config.php';  
+<?php  
 //action.php
+$connect = mysqli_connect('localhost', 'root', 'trolimoli1218!', 'dbase');
 
 $input = filter_input_array(INPUT_POST);
 
-$var = mysqli_real_escape_string($link, $input["var"]);
-$val = mysqli_real_escape_string($link, $input["val"]);
+$var = mysqli_real_escape_string($connect, $input["var"]);
+$val = mysqli_real_escape_string($connect, $input["val"]);
 
 if($input["action"] === 'edit')
 {
@@ -16,7 +16,7 @@ if($input["action"] === 'edit')
  WHERE id = '".$input["id"]."'
  ";
 
- mysqli_query($link, $query);
+ mysqli_query($connect, $query);
 
 }
 if($input["action"] === 'delete')
@@ -25,7 +25,7 @@ if($input["action"] === 'delete')
  DELETE FROM tbl_user 
  WHERE id = '".$input["id"]."'
  ";
- mysqli_query($link, $query);
+ mysqli_query($connect, $query);
 }
 
 echo json_encode($input);

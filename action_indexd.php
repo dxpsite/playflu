@@ -1,10 +1,9 @@
 <?php
-
 header('Content-Type: application/json');
 $input = filter_input_array(INPUT_POST);
 $fname = mysqli_real_escape_string($mysqli, $input["fname"]);
 require 'config.php';
-$mysqli = new mysqli('localhost', 'root', '********', 'dbase');
+$mysqli = new mysqli('localhost', 'root', 'trolimoli1218!', 'dbase');
 mysqli_set_charset($mysqli,"utf8");
 if (mysqli_connect_errno()) {
   echo json_encode(array('mysqli' => 'Failed to connect to MySQL: ' . mysqli_connect_error()));
@@ -22,7 +21,7 @@ if ($input['action'] === 'edit') {
 	//$mysqli->query("SELECT media WHERE id='" . $input['id'] . "'");
     //$delname = mysqli_result($mysqli->query("SELECT name FROM media WHERE id='" . $input['id'] . "' LIMIT 1"),0);
    // echo "Del name: ".$fileID;
-    unlink("/home/playtube/crud/media/files/".$fileID.""); 
+    unlink("/home/playflu/media/files/".$fileID.""); 
     $mysqli->query("ALTER TABLE media AUTO_INCREMENT = 1");
     //$mysqli->query("UPDATE media SET deleted=1 WHERE id='" . $input['id'] . "'");
 } 

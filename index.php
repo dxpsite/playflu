@@ -1,12 +1,8 @@
 <?php
                         require_once 'auth/auth.php';
-                        // HTML authentication
                         authHTML();
                         include 'theme/header.php';
-                        
-                        // Include config file
 
-//                        require_once 'config.php'; 
 ?>
 
      <script type="text/javascript">

@@ -8,9 +8,9 @@
 
     <?php
 
-  //                      require_once 'auth/auth.php';
+                        require_once 'auth/auth.php';
                         // HTML authentication
-               //         authHTML();
+                        authHTML();
                         include 'theme/header.php';
 
 

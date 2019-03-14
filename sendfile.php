@@ -78,8 +78,11 @@ $filePath = '/home/playtube/crud/media/files/'.$row['name'].'';
     'version'     => 'latest',
     'region'      => 'ru-msk',
     'credentials' => [
-           'key' => '**********************',
-           'credentials' => '***********************************',    
+        //'key'    => 'b3pH8xGkTchQxJNdHFn6V6',
+        //'secret' => 'f2DW59tqDS3oMjZHi2MqtPtdY9mYdTC4qx2diPxDH5Yw',\
+   // s3://faGeMDnBHQjsgUa9Apbt2z:fFLoRrXFmU9ELDMziopzXkvJYoVMpmsDm3t4tgLprSog@hb.bizmrg.com/textbox1
+           'key' => 'faGeMDnBHQjsgUa9Apbt2z',
+           'credentials' => 'fFLoRrXFmU9ELDMziopzXkvJYoVMpmsDm3t4tgLprSog',    
     ],
     'endpoint' => 'https://hb.bizmrg.com'
  ]);
