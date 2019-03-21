@@ -140,7 +140,7 @@ $extinfdata = ($duration_custom != 0) ? $duration_custom : $duration;
                                              }
                                              elseif (($row['stored'] == '1') && ($row['encoded'] == '1'))
                                              {
-                                            $output .= '<td>Loc & S3</td>';
+                                            $output .= '<td>Loc & S3 <a href="delfile-'.$row["id"].'" title="Delete from Storage" data-toggle="tooltip"><span class="glyphicon glyphicon-cloud-download"></span></a></td>';
                                                    }
                                                    else
                                                    {

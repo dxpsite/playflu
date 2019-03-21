@@ -39,10 +39,9 @@
 
                         </div>
 
-                       <?php
-$connect = mysqli_connect("localhost", "root", "trolimoli1218!", "dbase");
-$query = "SELECT * FROM tbl_user ORDER BY id DESC";
-$result = mysqli_query($connect, $query);
+<?php
+$query = "SELECT * FROM settings WHERE type = 0 ORDER BY id ASC";
+$result = mysqli_query($link, $query);
 ?>
 <html>  
  <head>  
@@ -52,11 +51,12 @@ $result = mysqli_query($connect, $query);
     </head>  
     <body>  
   <div class="container">  
-            <div class="table-responsive">  
-    <table id="editable_table" class="table table-bordered table-striped">
-     <thead>
+            <div class="table-responsive">
+            <h3>Flussonic Settings</h3>  
+    <table id="editable_table1" class="table table-bordered table-striped">
+     <thead> 
       <tr>
-      <th>ID</th>
+      <th></th>
        <th>Variable</th>
        <th>Value</th>
       </tr>
@@ -67,7 +67,41 @@ $result = mysqli_query($connect, $query);
      {
       echo '
       <tr>
-      <td>'.$row["id"].'</td>
+      <td></td>
+       <td>'.$row["var"].'</td>
+       <td>'.$row["val"].'</td>
+      </tr>
+      ';
+     }
+     ?>
+     </tbody>
+    </table>
+   </div>  
+  </div>  
+
+  <?php
+$query = "SELECT * FROM settings WHERE type = 1 ORDER BY id ASC";
+$result = mysqli_query($link, $query);
+?>
+ 
+  <div class="container">  
+            <div class="table-responsive">
+            <h3>FFMPEG Settings</h3>  
+    <table id="editable_table2" class="table table-bordered table-striped">
+     <thead> 
+      <tr>
+      <th></th>
+       <th>Variable</th>
+       <th>Value</th>
+      </tr>
+     </thead>
+     <tbody>
+     <?php
+     while($row = mysqli_fetch_array($result))
+     {
+      echo '
+      <tr>
+      <td></td>
        <td>'.$row["var"].'</td>
        <td>'.$row["val"].'</td>
       </tr>
@@ -82,7 +116,37 @@ $result = mysqli_query($connect, $query);
 </html>  
 <script>  
 $(document).ready(function(){  
-     $('#editable_table').Tabledit({
+     $('#editable_table1').Tabledit({
+      url:'../action.php',
+       deleteButton: false,
+    saveButton: false,
+    autoFocus: false,
+    buttons: {
+        edit: {
+            class: 'btn btn-sm btn-primary',
+            html: '<span class="glyphicon glyphicon-pencil"></span> &nbsp EDIT',
+            action: 'edit'
+        }
+    },
+      columns:{
+       identifier:[0, "id"],
+       editable:[[2, 'val']]
+      },
+      restoreButton:false,
+      onSuccess:function(data, textStatus, jqXHR)
+      {
+       if(data.action == 'delete')
+       {
+        $('#'+data.id).remove();
+       }
+      }
+     });
+ 
+});  
+ </script>
+ <script>  
+$(document).ready(function(){  
+     $('#editable_table2').Tabledit({
       url:'../action.php',
        deleteButton: false,
     saveButton: false,

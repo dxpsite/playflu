@@ -1,28 +1,41 @@
     <?php
+    /* System */
     define ('PL_HOST', $_SERVER['HTTP_HOST']);
 
     define ('PL_ABS_URL', '/home/playflu');
     
-    /*Flussonic */
-    define('FL_HOST', 'peerhub.ru');
+    /* Flussonic */
+    
+    define('FL_HOST', 'yoururl'); // without http:// or https:// ex. stream.com
 
-    define('FL_USR', 'playflu_usr');
+    define('FL_USR', 'login');
 
-    define('FL_PWD', 'letmein!');
+    define('FL_PWD', 'passsomecoded');
 
-    define('FL_PL_DEMO', 'playlist1');
+    define('FL_PL_DEMO', 'playlist_demo');
 
     define('FL_PL_DAILY', 'playlist_daily');
 
-    /* Database credentials. Assuming you are running MySQL
+    /* FFMPEG Settings */
+    define('FFMPEG_COMMAND', '-map 0:0 -map 0:0 -map 0:0 -map 0:1 -c:v:0 libx264 -b:v:0 2024k -metadata:s:v:0 language=eng -c:v:1 libx264 -b:v:1 1024k -metadata:s:v:1 language=eng -c:v:2 libx264 -b:v:2 500k -metadata:s:v:2 language=eng');
 
-    server with default setting (user 'root' with no password) */
+    /* Hotbox settings */
+
+    define('HB_ACCESSKEY', '***********************'); // Access key
+
+    define('HB_SECRETKEY', '****************************************'); // Secret key
+
+    define('HB_BUCKET', 'testbox1');
+
+    define('HB_ENDPOINT', 'https://hb.bizmrg.com');
+
+    /* Database credentials */
 
     define('DB_SERVER', 'localhost');
 
-    define('DB_USERNAME', 'root');
+    define('DB_USERNAME', 'login');
 
-    define('DB_PASSWORD', '**************');
+    define('DB_PASSWORD', 'password');
 
     define('DB_NAME', 'dbase');
 

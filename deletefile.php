@@ -9,7 +9,7 @@ if(isset($_GET['id'])){
  $id = $_GET['id']*1; 
 
 
-$query = "SELECT * FROM media WHERE id = $id AND stored = 0 LIMIT 1 FOR UPDATE";
+$query = "SELECT * FROM media WHERE id = $id AND stored = 1 LIMIT 1 FOR UPDATE";
 $result = mysqli_query($link,$query);
 
 while ($row = mysqli_fetch_array($result)) {
@@ -31,14 +31,11 @@ $filePath = "".PL_ABS_URL."/media/files/".$row['name']."";
  ]);
 
 try {
-    // Upload data.
-    $results3 = $s3->putObject(array(
-        'Bucket' => $bucket,
-        'Key'    => $keyname,
-        'SourceFile'   => $filePath,
-        'ACL'    => 'public-read',
-        'ContentType' => 'video/mp4'
-    ));
+    // delete data.
+     $results3 = $s3->deleteObject([
+                'Key'    => $keyname,
+                'Bucket' => $bucket,
+            ]);
 
 echo $results3['@metadata']["statusCode"]. "\n";
 echo $id . "\n";
@@ -54,7 +51,7 @@ catch (S3Exception $e) {
  echo $row['name']."<br />";  
  echo $row['id']."<br />";  
 
- mysqli_query($link,"UPDATE media SET stored=1 WHERE id='".$row['id']."'");
+ mysqli_query($link,"UPDATE media SET stored=0 WHERE id='".$row['id']."'");
 
  header("location: index.php");
 }  

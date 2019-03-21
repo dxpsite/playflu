@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="slider/css/normalize.css" />
   <link rel="stylesheet" href="slider/css/ion.rangeSlider.skinHTML5.css" />
   <script src="js/bootstrap-notify.js"></script>
-  <script src="js/playerjs-9.08.js" type="text/javascript"></script>
+  <script src="js/playerjs-9.35.js" type="text/javascript"></script>
 
 
 
