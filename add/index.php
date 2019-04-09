@@ -1,9 +1,9 @@
     <?php
 
                         include '../TMDB/curl.php';
-                 //       require_once '../auth/auth.php';
+                        require_once '../auth/auth.php';
                         // HTML authentication
-                   //     authHTML();
+                        authHTML();
                         include '../theme/header.php';
 
 
@@ -116,7 +116,7 @@
                         <div id="results"><div class="loader"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span></div></div>
                         <br>
 
-                        <form id="upload_form" action="../upload/file_upload_parser_test.php" enctype="multipart/form-data" method="post">
+                        <form id="upload_form" action="file_upload_parser.php" enctype="multipart/form-data" method="post">
                        
                         <label>TMBD ID:</label>
                         <input type="text" id="tmdbtitle" name="tmdbtitle">                            
@@ -129,7 +129,7 @@
 
 <script>
 
-var max_file_size 			= 2048576; //allowed file size. (1 MB = 1048576)
+var max_file_size 			= 2147483648; //allowed file size. (1 MB = 1048576)
 var allowed_file_types 		= ['video/avi', 'video/mp4', 'video/mpeg']; //allowed file types
 var result_output 			= '#output'; //ID of an element for response output
 var my_form_id 				= '#upload_form'; //ID of an element for response output
@@ -166,10 +166,10 @@ $(my_form_id).on( "submit", function(event) {
 		});
 		
 		//if total file size is greater than max file size
-		/*if(total_files_size > max_file_size){ 
+		if(total_files_size > max_file_size){ 
 			error.push( "You have "+total_selected_files+" file(s) with total size "+bytesToSize(total_files_size)+", Allowed size is " + bytesToSize(max_file_size) +", Try smaller file!"); //push error text
 			proceed = false; //set proceed flag to false
-		}*/
+		}
 		
 		var submit_btn  = $(this).find("input[type=submit]"); //form submit button	
 		

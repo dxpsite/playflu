@@ -14,7 +14,7 @@ if (!$action) {
 if ($action == "all") {
 
 ///////////////////////////////////
-$contents = file_get_contents('https://shardik:trolimoli1218!@peerhub.ru/flussonic/api/playlist/playlist1');
+$contents = file_get_contents('https://login:password@peerhub.ru/flussonic/api/playlist/playlist1');
 if (!empty($contents))
 {
 

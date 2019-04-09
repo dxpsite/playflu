@@ -65,7 +65,9 @@ function humanFileSize($size,$unit="") {
   return number_format($size)." bytes";
 }
 
-
+function getEncodedVideo($type, $file) {
+   return 'data:video/' . $type . ';base64,' . base64_encode(file_get_contents($file));
+}
 /*
     function formatBytes($bytes, $precision = 2) { 
     $units = array('B', 'KB', 'MB', 'GB', 'TB'); 

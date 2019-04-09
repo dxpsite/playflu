@@ -4,6 +4,7 @@ print_r($_FILES);
 
 require_once '../config.php';
 header('Content-type: text/html; charset=utf-8');
+$queued=1;
 function translit($s) {
   $s = (string) $s; // преобразуем в строковое значение
   $s = strip_tags($s); // убираем HTML-теги
@@ -50,14 +51,14 @@ if (!$fileTmpLoc) { // if file not chosen
 if (!$subsTmpLoc) { // if file not chosen
 
 
-move_uploaded_file($fileTmpLoc, "/home/playtube/crud/media/files/$fileName");
+move_uploaded_file($fileTmpLoc, "".PL_ABS_URL."/media/files/$fileName");
 
-$duration = shell_exec("ffprobe -i /home/playtube/crud/media/files/" .$fileName. " -show_entries format=duration -v quiet -of csv=\"p=0\"");
+$duration = shell_exec("ffprobe -i ".PL_ABS_URL."/media/files/" .$fileName. " -show_entries format=duration -v quiet -of csv=\"p=0\"");
 $duration_file = substr($duration, 0, -8);
 //$fsize = formatBytes($fileSize, 2); 
 $date = date("Y:m:d");
 //$container = substr($fileType, 6);
-$sql = "INSERT HIGH_PRIORITY INTO media (name, size, duration, tmdb, encoded) VALUES ('".$fileName."', '".$fileSize."', '".$duration_file."','".$tmdbtitle."','".$encoded."')";
+$sql = "INSERT HIGH_PRIORITY INTO media (name, size, duration, tmdb, encoded, queued) VALUES ('".$fileName."', '".$fileSize."', '".$duration_file."','".$tmdbtitle."','".$encoded."', '".$queued."')";
 //$mysqli->query($sql);
 //printf ("ID новой записи: %d.\n", $mysqli->insert_id);
 
@@ -122,14 +123,14 @@ $link->close();
 
 }
 else {
-move_uploaded_file($fileTmpLoc, "/home/playtube/crud/media/files/$fileName");
-move_uploaded_file($subsTmpLoc, "/home/playtube/crud/media/captions/$subsName");
-$duration = shell_exec("ffprobe -i /home/playtube/crud/media/files/" .$fileName. " -show_entries format=duration -v quiet -of csv=\"p=0\"");
+move_uploaded_file($fileTmpLoc, "/home/playflu/crud/media/files/$fileName");
+move_uploaded_file($subsTmpLoc, "/home/playflu/crud/media/captions/$subsName");
+$duration = shell_exec("ffprobe -i /home/playflu/crud/media/files/" .$fileName. " -show_entries format=duration -v quiet -of csv=\"p=0\"");
 $duration_file = substr($duration, 0, -8);
 //$fsize = formatBytes($fileSize, 2); 
 $date = date("Y:m:d");
 //$container = substr($fileType, 6);
-$sql = "INSERT HIGH_PRIORITY INTO media (name, size, duration, tmdb, captions) VALUES ('".$fileName."', '".$fileSize."', '".$duration_file."','".$tmdbtitle."', '".$subsName."')";
+$sql = "INSERT HIGH_PRIORITY INTO media (name, size, duration, tmdb, captions, queued) VALUES ('".$fileName."', '".$fileSize."', '".$duration_file."','".$tmdbtitle."', '".$subsName."', '".$queued."')";
 //$mysqli->query($sql);
 //printf ("ID новой записи: %d.\n", $mysqli->insert_id);
 

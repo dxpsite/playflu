@@ -1,1 +1,0 @@
-screen -d -m -S daemontool /usr/bin/php5.6 -f /opt/handbrake-bot/playlist-bot.php && /opt/handbrake-bot/hanbrake-bot.php

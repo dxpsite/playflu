@@ -1,1 +1,0 @@
-screen -d -m -S daemontool2 /usr/bin/php5.6 -f /opt/handbrake-bot/handbrake-bot.php
