@@ -15,18 +15,18 @@ Simplest playout system for Flussonic Media Server based on PHP-Mysql-NGINX
 
 4. Import from mysql_config structure and some test data to your database
 
-5. Copy folder [handbrake-bot] into etc/ and go to ssh and execute several commands:
-###### #cd /opt/hanbrake-bot
+5. Copy folder [playflu-bot] into etc/ and go to ssh and execute several commands:
+###### #cd /opt/playflu-bot
 ###### #screen
-###### #/usr/bin/php -f /opt/handbrake-bot/handbrake-bot.php
+###### #/usr/bin/php -f /opt/handbrake-bot/ffmpeg-bot.php
 ###### #/usr/bin/php -f /opt/handbrake-bot/playlist-bot.php
 
 Close terminal and open try again:
 
 Execute from command line:
-###### #ps aux | grep handbrake 
+###### #ps aux | grep ffmpeg-bot 
 or 
-###### #ps aux | grep playlist 
+###### #ps aux | grep playlist-bot 
 
 for check these processes
 
